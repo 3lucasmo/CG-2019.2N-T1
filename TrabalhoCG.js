@@ -84,13 +84,13 @@ function init(){
     }    
     loadModelFBX(Samurott);
     
-    var SamurottShiny = {
-        name:'SamurottShiny',
+    var Samuffs = {
+        name:'Samuffs',
         rotation:{x:0,y:3.14,z:0},
         translation:{x:15000,y:0,z:0},
         texture:'pm0503_00_BodyA1.png',
     }    
-    loadModelFBX(SamurottShiny);
+    loadModelFBX(Samuffs);
 
     var Talonflame = {
         name:'Talonflame',
@@ -216,7 +216,7 @@ function callPokeBall(){
     }, 500);
 }
 
-var pt = new THREE.TextureLoader().load("../../src/pokeuffs.png");
+var pt = new THREE.TextureLoader().load("../../src/Pokeuffs.png");
 var geometry = new THREE.SphereGeometry( 30, 32, 32 );
 var material = new THREE.MeshPhysicalMaterial( {color: 0xffffff, map: pt} );
 var Pokeball = new THREE.Mesh( geometry, material );
@@ -235,7 +235,7 @@ function onDocumentKeyDown(event){
     var Magikarp = scene.getObjectByName( "Magikarp" );
     var MagikarpShiny = scene.getObjectByName("MagikarpShiny");
     var Samurott = scene.getObjectByName( "Samurott" );
-    var SamurottShiny = scene.getObjectByName( "SamurotShiny" );
+    var Samuffs = scene.getObjectByName( "Samuffs" );
     var Talonflame= scene.getObjectByName( "Talonflame" );
     var TalonShiny= scene.getObjectByName( "TalonShiny" );
     var Vulpix= scene.getObjectByName( "Vulpix" );
@@ -250,8 +250,8 @@ function onDocumentKeyDown(event){
     console.log(keycode); // Get keycode from pressed keys
     
     if(keycode == 32){
-            num = getRandomInt(0,5);
-            //num = 4
+            //num = getRandomInt(0,5);
+            num = 1;
             //Magikarp
             if(num == 0){
                 var shiny = getRandomInt(0,2);
@@ -290,20 +290,21 @@ function onDocumentKeyDown(event){
             }
             //Samurott
             if(num == 1){
-                var shiny = getRandomInt(0,10);
+                //var shiny = getRandomInt(0,10);
+                var shiny = 0
                 if(shiny == 0){
                     callPokeBall();
                     setTimeout(function(){
-                        SamurottShiny.translateX(15000);
+                        Samuffs.translateX(15000);
                         Pokeball.translateX(-15000);
                     }, 1300);
         
                     setTimeout(function(){
-                        SamurottShiny.translateX(-15000);
+                        Samuffs.translateX(-15000);
                         Pokeball.translateX(15000);
                     }, 3500);        
                     setTimeout(function(){
-                        swal('SAMUROTT SHINY','Parabéns, o pokemón brilhou!','warning')
+                        swal('SAMUFFS','Você ganhou um samurott especial UFFS (Samuffs)','warning')
                     }, 3500);                
                 }
                 else{
@@ -317,11 +318,10 @@ function onDocumentKeyDown(event){
                         Samurott.translateX(-15000);
                         Pokeball.translateX(15000);
                     }, 3500);
+                    setTimeout(function(){
+                        swal({title:'SAMUROTT',})
+                    }, 3500);
                 }
-               setTimeout(function(){
-                    swal({title:'SAMUROTT',})
-                }, 3500);
-
             }
             //Talon
             if(num == 2){
