@@ -216,7 +216,7 @@ function callPokeBall(){
     }, 500);
 }
 
-var pt = new THREE.TextureLoader().load("../../src/ob0204_01.png");
+var pt = new THREE.TextureLoader().load("../../src/pokeuffs.png");
 var geometry = new THREE.SphereGeometry( 30, 32, 32 );
 var material = new THREE.MeshPhysicalMaterial( {color: 0xffffff, map: pt} );
 var Pokeball = new THREE.Mesh( geometry, material );
