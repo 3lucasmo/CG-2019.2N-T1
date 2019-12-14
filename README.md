@@ -5,4 +5,4 @@
 ##### Nome: Naomi Fernanda de Mello - 1521101007
 
 ### PokeUFFS
-Acesse o link <3lucasmo.github.io> e aponte a câmera para a imagem src/Hiro.jpg para ver a Pokebola
+Acesse o link [3lucasmo.github.io] e aponte a câmera para a imagem src/Hiro.jpg para ver a Pokebola
