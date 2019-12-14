@@ -250,8 +250,8 @@ function onDocumentKeyDown(event){
     console.log(keycode); // Get keycode from pressed keys
     
     if(keycode == 32){
-            //num = getRandomInt(0,5);
-            num = 1;
+            num = getRandomInt(0,5);
+            //num = 1;
             //Magikarp
             if(num == 0){
                 var shiny = getRandomInt(0,2);
@@ -290,8 +290,8 @@ function onDocumentKeyDown(event){
             }
             //Samurott
             if(num == 1){
-                //var shiny = getRandomInt(0,10);
-                var shiny = 0
+                var shiny = getRandomInt(0,10);
+                //var shiny = 0
                 if(shiny == 0){
                     callPokeBall();
                     setTimeout(function(){
